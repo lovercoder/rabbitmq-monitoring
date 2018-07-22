@@ -1,0 +1,9 @@
+{
+    "rabbitmqMonitoringApp": {
+        "State" : {
+            "null": "",
+            "ENABLED": "ENABLED",
+            "DISABLED": "DISABLED"
+        }
+    }
+}

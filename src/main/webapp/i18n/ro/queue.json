@@ -1,0 +1,25 @@
+
+{
+    "rabbitmqMonitoringApp": {
+        "queue" : {
+            "home": {
+                "title": "Queues",
+                "createLabel": "Creeare o nouă entitate Queue",
+                "createOrEditLabel": "Creeare sau editare Queue"
+            },
+            "created": "A fost creată o nouă entitate Queue cu identificatorul {{ param }}",
+            "updated": "Queue cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Queue cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Queue {{ id }}?"
+            },
+            "detail": {
+                "title": "Queue"
+            },
+            "name": "Name",
+            "count": "Count",
+            "description": "Description",
+            "host": "Host"
+        }
+    }
+}

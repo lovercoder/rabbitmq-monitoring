@@ -1,0 +1,25 @@
+
+{
+    "rabbitmqMonitoringApp": {
+        "queue" : {
+            "home": {
+                "title": "Queues",
+                "createLabel": "Queue erstellen",
+                "createOrEditLabel": "Queue erstellen oder bearbeiten"
+            },
+            "created": "Queue erstellt mit ID {{ param }}",
+            "updated": "Queue aktualisiert mit ID {{ param }}",
+            "deleted": "Queue gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Queue {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Queue"
+            },
+            "name": "Name",
+            "count": "Count",
+            "description": "Description",
+            "host": "Host"
+        }
+    }
+}

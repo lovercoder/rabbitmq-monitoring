@@ -1,0 +1,26 @@
+
+{
+    "rabbitmqMonitoringApp": {
+        "host" : {
+            "home": {
+                "title": "Hosts",
+                "createLabel": "Creeare o nouă entitate Host",
+                "createOrEditLabel": "Creeare sau editare Host"
+            },
+            "created": "A fost creată o nouă entitate Host cu identificatorul {{ param }}",
+            "updated": "Host cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Host cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Host {{ id }}?"
+            },
+            "detail": {
+                "title": "Host"
+            },
+            "name": "Name",
+            "description": "Description",
+            "dns": "Dns",
+            "port": "Port",
+            "state": "State"
+        }
+    }
+}

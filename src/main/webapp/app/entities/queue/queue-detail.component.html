@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="queue">
+            <h2><span jhiTranslate="rabbitmqMonitoringApp.queue.detail.title">Queue</span> {{queue.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="rabbitmqMonitoringApp.queue.name">Name</span></dt>
+                <dd>
+                    <span>{{queue.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="rabbitmqMonitoringApp.queue.count">Count</span></dt>
+                <dd>
+                    <span>{{queue.count}}</span>
+                </dd>
+                <dt><span jhiTranslate="rabbitmqMonitoringApp.queue.description">Description</span></dt>
+                <dd>
+                    <span>{{queue.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="rabbitmqMonitoringApp.queue.host">Host</span></dt>
+                <dd>
+                    <div *ngIf="queue.hostId">
+                        <a [routerLink]="['/host', queue.hostId, 'view']">{{queue.hostName}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/queue', queue.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

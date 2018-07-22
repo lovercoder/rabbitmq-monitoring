@@ -38,6 +38,9 @@ public class CacheConfiguration {
             cm.createCache(ro.autoepc.rabbitmqmonitoring.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(ro.autoepc.rabbitmqmonitoring.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(ro.autoepc.rabbitmqmonitoring.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(ro.autoepc.rabbitmqmonitoring.domain.Host.class.getName(), jcacheConfiguration);
+            cm.createCache(ro.autoepc.rabbitmqmonitoring.domain.Queue.class.getName(), jcacheConfiguration);
+            cm.createCache(ro.autoepc.rabbitmqmonitoring.domain.Credential.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

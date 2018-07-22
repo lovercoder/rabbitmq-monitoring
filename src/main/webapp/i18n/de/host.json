@@ -1,0 +1,26 @@
+
+{
+    "rabbitmqMonitoringApp": {
+        "host" : {
+            "home": {
+                "title": "Hosts",
+                "createLabel": "Host erstellen",
+                "createOrEditLabel": "Host erstellen oder bearbeiten"
+            },
+            "created": "Host erstellt mit ID {{ param }}",
+            "updated": "Host aktualisiert mit ID {{ param }}",
+            "deleted": "Host gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Host {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Host"
+            },
+            "name": "Name",
+            "description": "Description",
+            "dns": "Dns",
+            "port": "Port",
+            "state": "State"
+        }
+    }
+}

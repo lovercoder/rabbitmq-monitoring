@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="host">
+            <h2><span jhiTranslate="rabbitmqMonitoringApp.host.detail.title">Host</span> {{host.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="rabbitmqMonitoringApp.host.name">Name</span></dt>
+                <dd>
+                    <span>{{host.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="rabbitmqMonitoringApp.host.description">Description</span></dt>
+                <dd>
+                    <span>{{host.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="rabbitmqMonitoringApp.host.dns">Dns</span></dt>
+                <dd>
+                    <span>{{host.dns}}</span>
+                </dd>
+                <dt><span jhiTranslate="rabbitmqMonitoringApp.host.port">Port</span></dt>
+                <dd>
+                    <span>{{host.port}}</span>
+                </dd>
+                <dt><span jhiTranslate="rabbitmqMonitoringApp.host.state">State</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'rabbitmqMonitoringApp.State.' + host.state}}">{{host.state}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/host', host.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
