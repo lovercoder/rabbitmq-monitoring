@@ -4,7 +4,6 @@ import ro.autoepc.rabbitmqmonitoring.service.HostService;
 import ro.autoepc.rabbitmqmonitoring.domain.Host;
 import ro.autoepc.rabbitmqmonitoring.repository.HostRepository;
 import ro.autoepc.rabbitmqmonitoring.service.dto.HostDTO;
-import ro.autoepc.rabbitmqmonitoring.service.dto.QueueDTO;
 import ro.autoepc.rabbitmqmonitoring.service.mapper.HostMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 import java.util.Optional;
+
 /**
  * Service Implementation for managing Host.
  */

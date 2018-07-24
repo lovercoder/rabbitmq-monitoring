@@ -13,9 +13,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
-import java.util.List;
 import java.util.Optional;
+
 /**
  * Service Implementation for managing Queue.
  */
@@ -86,19 +85,5 @@ public class QueueServiceImpl implements QueueService {
     public void delete(Long id) {
         log.debug("Request to delete Queue : {}", id);
         queueRepository.deleteById(id);
-    }
-
-    /**
-     * Get all queues from host by host_id.
-     *
-     * @param id the id of the entity
-     * @return the entity
-     */
-    @Override
-    @Transactional(readOnly = true)
-    public Page<QueueDTO> findAllByHostId(Pageable pageable, Long id) {
-        log.debug("Request to get all Queues from a specific Host");
-        return queueRepository.findAllByHostId(pageable, id)
-            .map(queueMapper::toDto);
     }
 }

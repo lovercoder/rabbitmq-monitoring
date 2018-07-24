@@ -3,6 +3,7 @@ package ro.autoepc.rabbitmqmonitoring.service.dto;
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
+
 import ro.autoepc.rabbitmqmonitoring.domain.enumeration.State;
 
 /**

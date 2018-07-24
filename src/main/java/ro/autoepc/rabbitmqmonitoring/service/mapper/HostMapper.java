@@ -12,7 +12,6 @@ import org.mapstruct.*;
 public interface HostMapper extends EntityMapper<HostDTO, Host> {
 
 
-
     default Host fromId(Long id) {
         if (id == null) {
             return null;

@@ -1,10 +1,11 @@
 package ro.autoepc.rabbitmqmonitoring.repository;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 import ro.autoepc.rabbitmqmonitoring.domain.Queue;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 
 /**
@@ -14,5 +15,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface QueueRepository extends JpaRepository<Queue, Long> {
 
-    Page<Queue> findAllByHostId(Pageable pageable, Long id);
+    @Transactional
+    List<Queue> findAllByHostId(Long id);
 }

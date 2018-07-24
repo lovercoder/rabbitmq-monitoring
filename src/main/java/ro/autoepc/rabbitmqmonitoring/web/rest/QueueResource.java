@@ -124,19 +124,4 @@ public class QueueResource {
         queueService.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
-
-    /**
-     * GET  /queues/host/:id : get all the queues from a host.
-     *
-     * @param id the id of the hostDTO to retrieve
-     * @return the ResponseEntity with status 200 (OK) and the list of queues in body
-     */
-    @GetMapping("/queues/host/{id}")
-    @Timed
-    public ResponseEntity<List<QueueDTO>> getAllByHostId(Pageable pageable, @PathVariable Long id) {
-        log.debug("REST request to get a page of all the Queues from a Host");
-        Page<QueueDTO> page = queueService.findAllByHostId(pageable, id);
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/queues/host/{id}");
-        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
-    }
 }

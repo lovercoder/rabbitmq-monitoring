@@ -1,6 +1,7 @@
 package ro.autoepc.rabbitmqmonitoring.web.rest.vm;
 
 import ro.autoepc.rabbitmqmonitoring.service.dto.UserDTO;
+
 import javax.validation.constraints.Size;
 
 /**

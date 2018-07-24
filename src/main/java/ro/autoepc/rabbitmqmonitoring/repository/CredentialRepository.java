@@ -1,5 +1,6 @@
 package ro.autoepc.rabbitmqmonitoring.repository;
 
+import org.springframework.transaction.annotation.Transactional;
 import ro.autoepc.rabbitmqmonitoring.domain.Credential;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
@@ -12,4 +13,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CredentialRepository extends JpaRepository<Credential, Long> {
 
+    @Transactional
+    Credential findByHostId(Long id);
 }
